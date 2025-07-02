@@ -1,0 +1,206 @@
+{
+  "error": {
+    "http-status-code": {
+      "200": "The server send a response that could not be interpreted.",
+      "400": "The transmitted data was invalid.",
+      "401": "A logged-in user is required to perform this action. Please reload the page to login again.",
+      "403": "Your user does not have the required rights to perform this action.",
+      "404": "The requested element could not be found.",
+      "409": "The element was edited by another user.",
+      "422": "The item could not be processed.",
+      "499": "The login session expired and could not be extended automatically. Please reload the page to start a new session.",
+      "500": "A technical issue occurred.\nPlease report the issue via the Error-Reporting-Service.",
+      "502": "A technical issue occurred.\nPlease report the issue via the Error-Reporting-Service.",
+      "504": "A technical issue occurred.\nPlease report the issue via the Error-Reporting-Service.",
+      "0": "The server did not respond in a reasonable time."
+    },
+    "title": {
+      "500": "Error - 500 Internal Server Error",
+      "502": "Error - 502 Bad Gateway",
+      "504": "Error - 504 Gateway Timeout"
+    },
+    "error-code": {
+      "ILLEGAL_STATUS_CHANGE": {
+        "text": "Change to status \"{{newStatus}}\" has failed. Current status is \"{{oldStatus}}\"",
+        "arguments": {
+          "oldStatus": {
+            "IN_ADVANCE": "In advance",
+            "IN_CREATION": "In creation",
+            "IN_COORDINATION": "In coordination",
+            "RELEASED": "Released",
+            "REPLACED": "Replaced",
+            "IRRELEVANT": "Irrelevant"
+          },
+          "newStatus": {
+            "IN_ADVANCE": "In advance",
+            "IN_CREATION": "In creation",
+            "IN_COORDINATION": "In coordination",
+            "RELEASED": "Released",
+            "REPLACED": "Replaced",
+            "IRRELEVANT": "Irrelevant"
+          }
+        }
+      },
+      "REQUIRED_PRECONDITION_NOT_MET": {
+        "text": "Change to status \"{{newStatus}}\" has failed. Preconditions were not successfully met.",
+        "arguments": {
+          "newStatus": {
+            "IN_ADVANCE": "In advance",
+            "IN_CREATION": "In creation",
+            "IN_COORDINATION": "In coordination",
+            "RELEASED": "Released",
+            "IRRELEVANT": "Irrelevant"
+          }
+        }
+      },
+      "INVALID_RSQL_QUERY": {
+        "text": "The search could not be performed, because the query condition is invalid."
+      },
+      "NOTFOUND_01": {
+        "text": "The element of type {{entity}} with ID \"{{id}}\" could not be found.",
+        "arguments": {
+          "entity": {
+            "SeriesIntroductionDateBE": "Series introduction date",
+            "FamilyBE": "Family"
+          }
+        }
+      },
+      "NOTFOUND_02": {
+        "text": "Language {{language}} is not applicable."
+      },
+      "NOTFOUND_PARAMETERS": {
+        "text": "Following elements of type Parameter could not be found: {{names}}"
+      },
+      "NOTFOUND_PARAMETER_RECORD": {
+        "text": "The element of type ParameterRecord with {{legislator}} {{homologationProcedure}} {{regulatoryVersion}} {{driveArchitecture}} {{version}} could not be found."
+      },
+      "FAMILY_PARAMETER_RECORD_DOES_NOT_MATCH": {
+        "text": "The parameter record {{legislator}} {{homologationProcedure}} {{regulatoryVersion}} {{driveArchitecture}} {{version}} does not match the current family."
+      },
+      "INVALID_STATE_FOR_PARAMETER_RECORD": {
+        "text": "The parameter record {{legislator}} {{homologationProcedure}} {{regulatoryVersion}} {{driveArchitecture}} {{version}} is not in state released and cannot be assigned to a variant."
+      },
+      "PARAMETER_RECORD_IN_USE": {
+        "text": "The parameter record {{legislator}} {{homologationProcedure}} {{regulatoryVersion}} {{driveArchitecture}} {{version}} could not be deleted, because it is used by at least one family."
+      },
+      "NON_UNIQUE_COMBINATION_CHECK_EXCEPTION": {
+        "text": "Non Unique Combination Check could not be performed."
+      },
+      "NOTALLOWED_1": {
+        "text": "No advanced queries for favorite filter allowed."
+      },
+      "NOTALLOWED_2": {
+        "text": "Only equal operator allowed for favorite filter."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_01": {
+        "text": "The file does not correspond to the expected format."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_02": {
+        "text": "The file is syntactically incorrect in the following paths: {{violatedPaths}}."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_03": {
+        "text": "The family name in the JSON file does not match the name of the family currently displayed in the family single view."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_04": {
+        "text": "The homologation procedure in the JSON file does not match the homologation procedure of the family currently displayed in the family single view."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_05": {
+        "text": "The load case {{loadCase}} does not exist in the family currently displayed in the family single view."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_06": {
+        "text": "The number of decimal places in feature value {{loadCase}}/{{chassisDynamometerTestNumber}} does not match the defined number of decimal places in the corresponding feature with the id {{featureId}}."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_07": {
+        "text": "Invalid value \"{{enumValue}}\" for {{enumClass}}.",
+        "arguments": {
+          "enumClass": {
+            "HomologationProcedure": "Homologation procedure",
+            "LoadCase": "Load case",
+            "TestProcedure": "Test procedure",
+            "TestMode": "Test mode",
+            "TestType": "Test type",
+            "AdjustmentType": "Adjustment type"
+          }
+        }
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_08": {
+        "text": "Invalid value \"{{enumValue}}\" for boolean value."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_09": {
+        "text": "The imported file contains overlapping combinations of test number and test procedure."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_10": {
+        "text": "The value {{offendingNumber}} could not be interpreted as number."
+      },
+      "IMPORT_TYPE_TEST_APPROVAL_01": {
+        "text": "The declared values status is \"released\" or the EVE family status is \"canceled\"."
+      },
+      "IMPORT_TYPE_TEST_APPROVAL_02": {
+        "text": "\tThe file cannot be read."
+      },
+      "IMPORT_TYPE_TEST_APPROVAL_03": {
+        "text": "The model type code and/or the special equipments are missing. The import was canceled."
+      },
+      "IMPORT_TYPE_TEST_APPROVAL_04": {
+        "text": "There is no valid value for the mandatory input field \"Path\". Correct example: \"\\\\europe.bmw.corp\\winfs\\EA-proj\\...\""
+      },
+      "IMPORT_TYPE_TEST_APPROVAL_05": {
+        "text": "The model type code {{unknownModelTypeCode}} is unknown."
+      },
+      "INVALID_LOADCASE_SPECIFIC_DIFFERENTIATION": {
+        "text": "The load case-specific differentiation is not valid."
+      },
+      "BUSINESSLOCK_01": {
+        "text": "The dataset was changed by another user or the system. Please reload the page and enter your changes again."
+      },
+      "PARAMETER_DEFAULT_VALUE_IS_MISSING": {
+        "text": "A parameter or differentiation does not have a default value."
+      },
+      "DIFFERENTIATION_IS_MISSING": {
+        "text": "A differentiation has no assigned boolean formula."
+      },
+      "NON_UNIQUE_COMBINATION": {
+        "text": "The combination of the boolean formulas is not unique."
+      },
+      "INCONSISTENT_DATA_FOR_STATUS_CHANGE": {
+        "text": "Status change could not be performed, the parameter data set must be completely maintained."
+      },
+      "INVALID_ACTION_IN_GIVEN_STATUS": {
+        "text": "This action could not be performed in this parameter data set status."
+      },
+      "DEFAULT_PARAMETER_VALUE_NOT_FOUND": {
+        "text": "For parameter $identifier({{parameter}}) no default value could be determined."
+      },
+      "SELECTED_PARAMETER_RECORD_IS_NULL": {
+        "text": "No parameter data set was selected."
+      },
+      "NON_UNIQUE_DEFAULT_PARAMETER_VALUE": {
+        "text": "Boole conditions for parameter $identifier({{parameter}}) are not unique."
+      },
+      "PARAMETER_CONDITION_PARSE": {
+        "text": "Boole conditions for parameter $identifier({{parameter}}) could not be parsed: {{condition}}."
+      },
+      "PARAMETER_PATH_NOT_FOUND": {
+        "text": "The path for the parameter $identifier({{parameter}}) could not be found."
+      },
+      "INVALID_FEATURE_VALUE_SELECTION": {
+        "text": "The feature $identifier({{featureName}}) is marked as  \"TP only\" but non TP values have been selected for this feature."
+      },
+      "INVALID_SUBSTITUTION_DECIMAL_PLACES": {
+        "text": "The defined substitution decimal places for the $identifier({{characteristicVariable}}) is invalid."
+      },
+      "VARIANT_NAME_LENGTH_EXCEEDED_EXCEPTION": {
+        "text": "The name can be a maximum of 256 characters long."
+      }
+    },
+    "bool-lang": {
+      "missing-token": "Missing token {{expecting}} at {{at}}",
+      "unwanted-token": "Unexpected token {{tokenName}}. Expected was: {{expecting}}.",
+      "input-mismatch": "Missmatched input {{mismatched}}. Expected was: {{expecting}}.",
+      "no-viable-alternative": "Input {{input}} could not be read further.",
+      "unknown-variable": "The given variable \"{{variable}}\" does not exist.",
+      "unknown-char": "Invalid character \"{{char}}\".",
+      "invalid-formula": "Invalid formula: {{formula}}"
+    }
+  }
+}

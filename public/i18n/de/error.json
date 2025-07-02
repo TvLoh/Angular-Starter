@@ -1,0 +1,206 @@
+{
+  "error": {
+    "http-status-code": {
+      "200": "Der Server hat eine Antwort gesendet, die nicht interpretiert werden kann.",
+      "400": "Die übertragenen Daten waren ungültig.",
+      "401": "Zum Ausführen dieser Aktion ist ein angemeldeter Benutzer notwendig. Bitte laden sie die Seite neu, um sich neu anzumelden.",
+      "403": "Ihr Benutzer verfügt nicht über die benötigten Rechte zur Ausführung dieser Aktion.",
+      "404": "Das gewünschte Element konnte nicht gefunden werden.",
+      "409": "Das Element wurde von einem weiteren User bearbeitet.",
+      "422": "Das Element konnte nicht verarbeitet werden.",
+      "499": "Die Anmeldesession ist abgelaufen und konnte nicht automatisch verlängert werden. Bitte laden sie die Seite neu, um eine neue Session zu erstellen.",
+      "500": "Es ist ein technischer Fehler aufgetreten.\nBitte melden Sie das Problem über den Error-Reporting-Service.",
+      "502": "Es ist ein technischer Fehler aufgetreten.\nBitte melden Sie das Problem über den Error-Reporting-Service.",
+      "504": "Es ist ein technischer Fehler aufgetreten.\nBitte melden Sie das Problem über den Error-Reporting-Service.",
+      "0": "Der Server hat nicht in angemessener Zeit geantwortet."
+    },
+    "title": {
+      "500": "Fehler - 500 Interner Serverfehler",
+      "502": "Fehler - 502 Schlechtes Gateway",
+      "504": "Fehler - 504 Gateway-Zeitüberschreitung"
+    },
+    "error-code": {
+      "ILLEGAL_STATUS_CHANGE": {
+        "text": "Der Wechsel in den Status \"{{newStatus}}\" ist fehlgeschlagen. Aktueller Status ist \"{{oldStatus}}\"",
+        "arguments": {
+          "oldStatus": {
+            "IN_ADVANCE": "Vorab",
+            "IN_CREATION": "In Erstellung",
+            "IN_COORDINATION": "In Abstimmung",
+            "RELEASED": "Freigegeben",
+            "REPLACED": "Abgelöst",
+            "IRRELEVANT": "Nicht relevant"
+          },
+          "newStatus": {
+            "IN_ADVANCE": "Vorab",
+            "IN_CREATION": "In Erstellung",
+            "IN_COORDINATION": "In Abstimmung",
+            "RELEASED": "Freigegeben",
+            "REPLACED": "Abgelöst",
+            "IRRELEVANT": "Nicht relevant"
+          }
+        }
+      },
+      "REQUIRED_PRECONDITION_NOT_MET": {
+        "text": "Der Wechsel in den Status \"{{newStatus}}\" ist fehlgeschlagen. Vorbedingungen wurden nicht erfolgreich erfüllt.",
+        "arguments": {
+          "newStatus": {
+            "IN_ADVANCE": "Vorab",
+            "IN_CREATION": "In Erstellung",
+            "IN_COORDINATION": "In Abstimmung",
+            "RELEASED": "Freigegeben",
+            "IRRELEVANT": "Nicht relevant"
+          }
+        }
+      },
+      "INVALID_RSQL_QUERY": {
+        "text": "Die Suchanfrage konnte nicht durchgeführt werden, da die Bedingung ungültig ist."
+      },
+      "NOTFOUND_01": {
+        "text": "Das Element vom Typ {{entity}} mit der ID \"{{id}}\" konnte nicht gefunden werden.",
+        "arguments": {
+          "entity": {
+            "SeriesIntroductionDateBE": "Serieneinsatztermin",
+            "FamilyBE": "Familie"
+          }
+        }
+      },
+      "NOTFOUND_02": {
+        "text": "Die Sprache {{language}} ist nicht anwendbar."
+      },
+      "NOTFOUND_PARAMETERS": {
+        "text": "Folgende Element vom Typ Parameter konnten nicht gefunden werden: {{names}}"
+      },
+      "NOTFOUND_PARAMETER_RECORD": {
+        "text": "Das Element vom Typ ParameterRecord mit {{legislator}} {{homologationProcedure}} {{regulatoryVersion}} {{driveArchitecture}} {{version}} konnte nicht gefunden werden."
+      },
+      "FAMILY_PARAMETER_RECORD_DOES_NOT_MATCH": {
+        "text": "Der Parameterdatensatz {{legislator}} {{homologationProcedure}} {{regulatoryVersion}} {{driveArchitecture}} {{version}} passt nicht zur aktuellen Familie."
+      },
+      "INVALID_STATE_FOR_PARAMETER_RECORD": {
+        "text": "Der Parameterdatensatz {{legislator}} {{homologationProcedure}} {{regulatoryVersion}} {{driveArchitecture}} {{version}} ist nicht im Status Freigegeben und kann nicht zu einer Variante neu zugewiesen werden."
+      },
+      "PARAMETER_RECORD_IN_USE": {
+        "text": "Der Parameterdatensatz {{legislator}} {{homologationProcedure}} {{regulatoryVersion}} {{driveArchitecture}} {{version}} kann nicht gelöscht werden, weil er von mindestens einer Familie verwendet wird."
+      },
+      "NON_UNIQUE_COMBINATION_CHECK_EXCEPTION": {
+        "text": "Die Prüfung auf nicht eindeutige Kombinationen konnte nicht durchgeführt werden."
+      },
+      "NOTALLOWED_1": {
+        "text": "Keine erweiterten Abfragen für Favoritenfilter erlaubt."
+      },
+      "NOTALLOWED_2": {
+        "text": "Für den Favoritenfilter ist nur der Gleichheitsoperator zulässig."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_01": {
+        "text": "Die Datei entspricht nicht dem erwarteten Format."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_02": {
+        "text": "Die Datei ist syntaktisch fehlerhaft in folgenden Pfaden: {{violatedPaths}}."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_03": {
+        "text": "Der Familienname in der JSON Datei stimmt nicht mit dem Namen der Familie überein, die derzeit in der Familien-Einzelansicht angezeigt wird."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_04": {
+        "text": "Das Zulassungsverfahren in der JSON Datei stimmt nicht mit dem Zulassungsverfahren in der Familie überein, die derzeit in der Familien-Einzelansicht angezeigt wird."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_05": {
+        "text": "Der Lastfall {{loadCase}} existiert nicht für die Familie, die derzeit in der Familien-Einzelansicht angezeigt wird."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_06": {
+        "text": "Die Anzahl der Nachkommastellen im Messwert {{loadCase}}/{{chassisDynamometerTestNumber}} stimmt nicht mit der definierten Anzahl an Nachkommastellen des zugehörigen Features mit der ID {{featureId}} überein."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_07": {
+        "text": "Ungültiger Wert \"{{enumValue}}\" für {{enumClass}}.",
+        "arguments": {
+          "enumClass": {
+            "HomologationProcedure": "Zulassungsverfahren",
+            "LoadCase": "Lastfall",
+            "TestProcedure": "Testprozedur",
+            "TestMode": "Testmode",
+            "TestType": "Testtyp",
+            "AdjustmentType": "Anpassungstyp"
+          }
+        }
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_08": {
+        "text": "Ungültiger Wert \"{{enumValue}}\" für booleschen Werte."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_09": {
+        "text": "Die Importdatei enthält sich Überschneidende Kombinationen aus Testnummer und Testprozedur."
+      },
+      "IMPORT_CHASSISDYNAMOMETERTEST_10": {
+        "text": "Der Wert {{offendingNumber}} konnte nicht als Zahl interpretiert werden."
+      },
+      "IMPORT_TYPE_TEST_APPROVAL_01": {
+        "text": "Der HerA Status ist \"Freigegeben\" oder der EVE Familien Status ist \"Storniert\""
+      },
+      "IMPORT_TYPE_TEST_APPROVAL_02": {
+        "text": "Die Datei kann nicht gelesen werden."
+      },
+      "IMPORT_TYPE_TEST_APPROVAL_03": {
+        "text": "Der Typschlüssel und/oder die Sonderausstattung fehlen. Der Import wurde abgebrochen."
+      },
+      "IMPORT_TYPE_TEST_APPROVAL_04": {
+        "text": "Kein valider Wert für das Pflichtfeld \"Pfad\" angegeben. Korrektes Beispiel: \"\\\\europe.bmw.corp\\winfs\\EA-proj\\...\""
+      },
+      "IMPORT_TYPE_TEST_APPROVAL_05": {
+        "text": "Der Typschlüssel {{unknownModelTypeCode}} ist unbekannt."
+      },
+      "INVALID_LOADCASE_SPECIFIC_DIFFERENTIATION": {
+        "text": "Die lastfall-spezifische Differenzierung ist nicht gültig."
+      },
+      "BUSINESSLOCK_01": {
+        "text": "Der Datensatz wurde von einem anderen Benutzer oder System verändert. Bitte aktualisiere die Seite und gib deine Änderungen neu ein."
+      },
+      "PARAMETER_DEFAULT_VALUE_IS_MISSING": {
+        "text": "Ein Parameter oder eine Differenzierung hat keinen Standardwert."
+      },
+      "DIFFERENTIATION_IS_MISSING": {
+        "text": "Eine Differenzierung hat keine zugeordnete boolesche Formel."
+      },
+      "NON_UNIQUE_COMBINATION": {
+        "text": "Die Kombination der booleschen Formeln ist nicht eindeutig."
+      },
+      "INCONSISTENT_DATA_FOR_STATUS_CHANGE": {
+        "text": "Statusänderung konnte nicht durchgeführt werden, der Parameterdatensatz muss vollständig gepflegt werden."
+      },
+      "INVALID_ACTION_IN_GIVEN_STATUS": {
+        "text": "Diese Aktion konnte in diesem Parameterdatensatzstatus nicht durchgeführt werden."
+      },
+      "DEFAULT_PARAMETER_VALUE_NOT_FOUND": {
+        "text": "Für den Parameter $identifier({{parameter}}) konnte kein default Wert ermittelt werden."
+      },
+      "SELECTED_PARAMETER_RECORD_IS_NULL": {
+        "text": "Es wurde kein Parameterdatensatz ausgewählt."
+      },
+      "NON_UNIQUE_DEFAULT_PARAMETER_VALUE": {
+        "text": "Boolsche Bedingungen für den Parameter $identifier({{parameter}}) sind nicht eindeutig."
+      },
+      "PARAMETER_CONDITION_PARSE": {
+        "text": "Boolsche Bedingungen für den Parameter $identifier({{parameter}}) konnte nicht geparsed werden: {{condition}}."
+      },
+      "PARAMETER_PATH_NOT_FOUND": {
+        "text": "Der Pfad für den Parameter $identifier({{parameter}}) konnte nicht gefunden werden."
+      },
+      "INVALID_FEATURE_VALUE_SELECTION": {
+        "text": "Das Feature $identifier({{featureName}}) ist als \"TP only\" markiert, aber es wurden nicht TP Werte für dieses Feature selektiert."
+      },
+      "INVALID_SUBSTITUTION_DECIMAL_PLACES": {
+        "text": "Die definierten Ersatznachkommastellen für $identifier({{characteristicVariable}}) sind ungültig."
+      },
+      "VARIANT_NAME_LENGTH_EXCEEDED_EXCEPTION": {
+        "text": "Der Name darf maximal 256 Zeichen lang sein."
+      }
+    },
+    "bool-lang": {
+      "missing-token": "Fehlendes Token {{expecting}} bei {{at}}",
+      "unwanted-token": "Unerwartetes Token {{tokenName}}. Erwartet wurde: {{expecting}}.",
+      "input-mismatch": "Unpassende Eingabe {{mismatched}}. Erwartet wurde: {{expecting}}.",
+      "no-viable-alternative": "Eingabe {{input}} kann nicht weiter eingelesen werden.",
+      "unknown-variable": "Das angegebene Merkmal \"{{variable}}\" existiert nicht.",
+      "unknown-char": "Ungültiges Zeichen \"{{char}}\".",
+      "invalid-formula": "Ungültige Formel: {{formula}}"
+    }
+  }
+}
