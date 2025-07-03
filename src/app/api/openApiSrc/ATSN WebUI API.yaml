@@ -1,0 +1,409 @@
+openapi: 3.0.3
+info:
+  title: ATSN WebUI API
+  version: 1.0.0
+  description: API for the ATSN WebUI
+paths:
+  /api/v1/bugs/append_bug/{bug_id}:
+    get:
+      operationId: api_v1_bugs_append_bug_retrieve
+      parameters:
+      - in: path
+        name: bug_id
+        schema:
+          type: integer
+        description: Bug ID for the bug that will be extended with the testruns from
+          the query
+        required: true
+      - in: query
+        name: firmware_version
+        schema:
+          type: string
+        description: Firmware version to which the page should be redirected, needed
+          for FirmwareVersionResults as previous page
+      - in: query
+        name: major_version_name
+        schema:
+          type: string
+        description: major firmware version to which the page should be redirected,
+          needed for TestCaseResults as previous page
+      - in: query
+        name: pre_analyse_findings
+        schema:
+          type: string
+        description: pre-analyse-findings for the given bug
+      - in: query
+        name: previous_page
+        schema:
+          type: string
+        description: 'hint to where to redirect again, options are: Log, TestResults,
+          FirmwareResults, TestCaseResults'
+        required: true
+      - in: query
+        name: testcase_id
+        schema:
+          type: string
+        description: Name of the testcase to which the page should be redirected,
+          needed for TestCaseResults as previous page
+      - in: query
+        name: testrun_ids
+        schema:
+          type: string
+        description: List of TestRun IDs for which the bug should be written (comma
+          separated list of INTs)
+        required: true
+      - in: query
+        name: testset_name
+        schema:
+          type: string
+        description: Name of the testset to which the page should be redirected, needed
+          for TestResults as previous page
+      tags:
+      - ADO
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/bugs/show_bug_info/{bug_id}:
+    get:
+      operationId: api_v1_bugs_show_bug_info_retrieve
+      parameters:
+      - in: path
+        name: bug_id
+        schema:
+          type: integer
+        description: ID of bug for which all information should be shown
+        required: true
+      - in: query
+        name: comments
+        schema:
+          type: boolean
+        description: If true, workitem comments will be queried as well
+      tags:
+      - ADO
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/bugs/write_bug:
+    get:
+      operationId: api_v1_bugs_write_bug_retrieve
+      parameters:
+      - in: query
+        name: firmware_version
+        schema:
+          type: string
+        description: Firmware version to which the page should be redirected, needed
+          for FirmwareVersionResults as previous page
+      - in: query
+        name: major_version_name
+        schema:
+          type: string
+        description: major firmware version to which the page should be redirected,
+          needed for TestCaseResults as previous page
+      - in: query
+        name: pre_analyse_findings
+        schema:
+          type: string
+        description: pre-analyse-findings for the given bug
+      - in: query
+        name: previous_page
+        schema:
+          type: string
+        description: 'hint to where to redirect again, options are: Log, TestResults,
+          FirmwareResults, TestCaseResults'
+        required: true
+      - in: query
+        name: testcase_id
+        schema:
+          type: string
+        description: Name of the testcase to which the page should be redirected,
+          needed for TestCaseResults as previous page
+      - in: query
+        name: testrun_ids
+        schema:
+          type: string
+        description: List of TestRun IDs for which the bug should be written (comma
+          separated list of INTs)
+        required: true
+      - in: query
+        name: testset_name
+        schema:
+          type: string
+        description: Name of the testset to which the page should be redirected, needed
+          for TestResults as previous page
+      tags:
+      - ADO
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/data/firmwareresults/{fw_version_name}:
+    get:
+      operationId: api_v1_data_firmwareresults_retrieve
+      description: API endpoint to retrieve test results for a firmware version
+      parameters:
+      - in: query
+        name: from_fw
+        schema:
+          type: string
+        description: limits the selected firmware starting from this firmware version
+      - in: path
+        name: fw_version_name
+        schema:
+          type: string
+        description: name of firmware version
+        required: true
+      - in: query
+        name: to_fw
+        schema:
+          type: string
+        description: limits the selected firmware to this firmware version
+      tags:
+      - data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/data/testcaseresults/{testcase_id}/{major_version_name}:
+    get:
+      operationId: api_v1_data_testcaseresults_retrieve
+      description: api endpoint to retrieve test results for a test case
+      parameters:
+      - in: query
+        name: from_fw
+        schema:
+          type: string
+        description: limits the selected firmware starting from this firmware version
+      - in: path
+        name: major_version_name
+        schema:
+          type: string
+        description: name of major firmware version
+        required: true
+      - in: path
+        name: testcase_id
+        schema:
+          type: integer
+        description: Testcase ID
+        required: true
+      - in: query
+        name: to_fw
+        schema:
+          type: string
+        description: limits the selected firmware to this firmware version
+      tags:
+      - data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/data/testresults/{testset_name}:
+    get:
+      operationId: api_v1_data_testresults_retrieve
+      description: API endpoint to retrieve test results for a testset and major version
+      parameters:
+      - in: query
+        name: from_fw
+        schema:
+          type: string
+        description: limits the selected firmware starting from this firmware version
+      - in: path
+        name: major_version_name
+        schema:
+          type: string
+        description: Major firmware version
+        required: true
+      - in: path
+        name: testset_name
+        schema:
+          type: string
+        description: Testset name
+        required: true
+      - in: query
+        name: to_fw
+        schema:
+          type: string
+        description: limits the selected firmware to this firmware version
+      tags:
+      - data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/data/testresults/{testset_name}/{major_version_name}:
+    get:
+      operationId: api_v1_data_testresults_retrieve_2
+      description: API endpoint to retrieve test results for a testset and major version
+      parameters:
+      - in: query
+        name: from_fw
+        schema:
+          type: string
+        description: limits the selected firmware starting from this firmware version
+      - in: path
+        name: major_version_name
+        schema:
+          type: string
+        description: Major firmware version
+        required: true
+      - in: path
+        name: testset_name
+        schema:
+          type: string
+        description: Testset name
+        required: true
+      - in: query
+        name: to_fw
+        schema:
+          type: string
+        description: limits the selected firmware to this firmware version
+      tags:
+      - data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/data/teststatistics:
+    get:
+      operationId: api_v1_data_teststatistics_retrieve
+      tags:
+      - data
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/logs/{testrun_id}:
+    get:
+      operationId: api_v1_logs_retrieve
+      description: API endpoint to retrieve logs for a specific test run.
+      parameters:
+      - in: query
+        name: filter
+        schema:
+          type: string
+        description: Filter logs by search term. Uses PostgreSQL full-text search.
+      - in: query
+        name: loglevel
+        schema:
+          type: string
+        description: Filter logs by log level. Can be DEBUG, INFO, WARNING, ERROR.
+      - in: path
+        name: testrun_id
+        schema:
+          type: integer
+        description: TestRun ID
+        required: true
+      tags:
+      - logs
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/logs/analyse_logs/{testrun_id}:
+    get:
+      operationId: api_v1_logs_analyse_logs_retrieve
+      parameters:
+      - in: path
+        name: testrun_id
+        schema:
+          type: integer
+        description: TestRun ID
+        required: true
+      tags:
+      - logs
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/logs/download/{testrun_id}:
+    get:
+      operationId: api_v1_logs_download_retrieve
+      description: API endpoint to download logs for a specific test run.
+      parameters:
+      - in: query
+        name: loglevel
+        schema:
+          type: string
+        description: Filter logs by log level. Can be DEBUG, INFO, WARNING, ERROR.
+      - in: path
+        name: testrun_id
+        schema:
+          type: integer
+        description: TestRun ID
+        required: true
+      tags:
+      - logs
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/overview-testrack:
+    get:
+      operationId: api_v1_overview_testrack_retrieve
+      tags:
+      - main
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/overview-testset:
+    get:
+      operationId: api_v1_overview_testset_retrieve
+      tags:
+      - main
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
+tags:
+- name: logs
+  description: Testrun logs endpoints

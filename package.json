@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "generate:openApi": "ng-openapi-gen -c src/app/api/openApiSrc/ng-openapi-gen-config.json"
   },
   "prettier": {
     "overrides": [
@@ -30,6 +31,7 @@
     "@jest/globals": "^30.0.3",
     "@jsverse/transloco": "^7.6.1",
     "@ngxs/store": "^20.0.2",
+    "loht-true-skeleton": "^3.0.10",
     "ng-openapi-gen": "^0.53.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

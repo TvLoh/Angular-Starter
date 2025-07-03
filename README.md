@@ -63,3 +63,8 @@ For more information on using the Angular CLI, including detailed command refere
 Translation: https://jsverse.gitbook.io/transloco/core-concepts/translation-in-the-template
 
 State(NGXS): https://www.ngxs.io/concepts/state
+
+
+TODO:
+material + theeming
+open API

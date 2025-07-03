@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/ng-openapi-gen/ng-openapi-gen-schema.json",
+  "output": "src/app/api/api",
+  "input": "src/app/api/openApiSrc/ATSN WebUI API.yaml",
+  "baseUrl": "http://localhost:4200/",
+  "templates": "src/app/api/template",
+  "defaultTag": "openApi",
+  "serviceSuffix": "ApiService",
+  "modelSuffix": "Model",
+  "useHttpClient": true,
+  "generateModels": true,
+  "generateServices": true,
+  "addIndexFile": true,
+  "withInterfaces": true,
+  "withJSDoc": true
+}
