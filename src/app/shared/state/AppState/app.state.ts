@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Action, Selector, State, StateContext } from "@ngxs/store";
-import { AppSetInitialUserRoleAction } from './app.action';
+import { AppSetInitialUserRoleAction, AppStateSetGlobalLoadingOverlayAction } from './app.action';
 
 enum EnumUserRoles {
   READ = 'termo_read_user',
@@ -10,6 +10,7 @@ enum EnumUserRoles {
 export interface IAppState {
   user: any,
   authorized: boolean
+  isLoading: boolean
 }
 
 @State<IAppState>({
@@ -19,7 +20,8 @@ export interface IAppState {
       familyName: "",
       roles: []
     },
-    authorized: true
+    authorized: true,
+    isLoading: true
   }
 })
 
@@ -46,6 +48,11 @@ export class AppState {
     return state.user
   }
 
+  @Selector()
+  static appStateIsLoading(state: IAppState) {
+    return state.isLoading
+  }
+
   @Action(AppSetInitialUserRoleAction)
   setInitialUserRole(ctx: StateContext<IAppState>) {
     ctx.patchState({
@@ -62,5 +69,12 @@ export class AppState {
                     }
                 }
             )*/
+  }
+
+  @Action(AppStateSetGlobalLoadingOverlayAction)
+  setLoadingOverlay(ctx: StateContext<IAppState>, isLoading: AppStateSetGlobalLoadingOverlayAction) {
+    ctx.patchState(
+      isLoading
+    )
   }
 }

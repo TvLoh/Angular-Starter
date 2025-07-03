@@ -1,8 +1,14 @@
 <ng-container *transloco="let t; prefix: 'common'">
   <h1>{{ t('yourRoles') }}</h1>
   <div class="true-skeleton">
-    <h1>{{ t('critical', {number: '5'}) }}</h1>
-    <img src="favicon.ico" alt="App Favicon" width="32" height="32" />
+    <h1>Loading Overlay</h1>
+    <h2>{{ t('critical', {number: '5'}) }}</h2>
+    <img src="favicon.ico" alt="App Favicon" width="32" height="32"/>
+  </div>
+  <div [class.true-skeleton]="isLoading | async">
+    <h1>Interceptor Overlay</h1>
+    <h2>{{ t('critical', {number: '5'}) }}</h2>
+    <img src="favicon.ico" alt="App Favicon" width="32" height="32"/>
   </div>
 </ng-container>
 

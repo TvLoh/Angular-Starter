@@ -7,16 +7,21 @@ import { provideTransloco, translocoConfig, } from '@jsverse/transloco';
 import { TranslocoHttpLoader } from './shared/services/translocoHttpLoader';
 import { translocoConfiguration } from './shared/constants/translocoConfig';
 import { AppState } from './shared/state/AppState/app.state';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
 import { withNgxsStoragePlugin } from '@ngxs/storage-plugin';
+import { LoadingInterceptor } from './core/interceptor/loading.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({eventCoalescing: true}),
     provideRouter(routes),
-    provideHttpClient(),
+    provideHttpClient(
+      withInterceptors([
+        LoadingInterceptor
+      ])
+    ),
     provideTransloco({
       config: translocoConfig(translocoConfiguration),
       loader: TranslocoHttpLoader,
