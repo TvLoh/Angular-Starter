@@ -60,6 +60,6 @@ For more information on using the Angular CLI, including detailed command refere
 
 ## Used Package information
 
-Translation: https://jsverse.gitbook.io/transloco/
+Translation: https://jsverse.gitbook.io/transloco/core-concepts/translation-in-the-template
 
 State(NGXS): https://www.ngxs.io/concepts/state

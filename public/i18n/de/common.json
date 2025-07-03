@@ -50,7 +50,7 @@
     },
     "dateFormat": {
       "longDate": "dd.MM.yyyy",
-      "longDateSlash": "dd/MM/yyyy",
+      "longDateSlash": "dd/MM/yyyy"
     },
     "operators": {
       "and": "Und",

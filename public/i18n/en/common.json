@@ -1,27 +1,24 @@
 {
   "common": {
     "yourRoles": "Your roles:",
+    "new": "New",
     "ok": "OK",
-    "cancel": "Cancel",
-    "cancelAndClose": "Cancel and Close",
-    "edit": "Edit",
+    "approve": "Approve",
     "save": "Save",
     "saveAndClose": "Save and Close",
-    "reset": "Reset",
+    "create": "Create",
+    "edit": "Edit",
     "close": "Close",
-    "approve": "Approve",
-    "release": "Release",
-    "replace": "Replace",
-    "new": "New",
+    "cancel": "Cancel",
+    "cancelAndClose": "Cancel and Close",
+    "reset": "Reset",
+    "delete": "Delete",
     "copy": "Copy",
     "yes": "Yes",
     "no": "No",
     "placeholder": "Placeholder",
-    "filterPlaceholder": "Search",
     "noResultsMessage": "No results found",
     "loadingMessage": "Loading...",
-    "ariaLabel": "Open list of options",
-    "clearAllAriaLabel": "Clear field",
     "selectAll": "Select all",
     "unselectAll": "Unselect all",
     "logout": "Logout",
@@ -37,81 +34,28 @@
     "warningWithParameter": "WARNING ({{number}})",
     "info": "INFO ({{number}})",
     "timestamp": {
-      "justNow": "Just now",
+      "justNow": "just now",
       "oneMinuteAgo": "1 minute ago",
       "minutesAgo": "{{minutes}} minutes ago",
       "oneHourAgo": "1 hour ago",
       "hoursAgo": "{{hours}} hours ago",
-      "yesterday": "Yesterday",
+      "yesterday": "yesterday",
       "oneDayAgo": "1 day ago",
       "daysAgo": "{{days}} days ago",
       "oneMonthAgo": "1 month ago",
       "monthsAgo": "{{months}} months ago",
       "oneYearAgo": "1 year ago",
       "yearsAgo": "{{years}} years ago",
-      "tomorrow": "Tomorrow"
+      "tomorrow": "tomorrow"
+    },
+    "dateFormat": {
+      "longDate": "MM/dd/yyyy",
+      "longDateSlash": "MM/dd/yyyy"
     },
     "operators": {
       "and": "And",
       "or": "Or",
       "not": "Not"
-    },
-    "exportExcelTooltip": "Export to excel",
-    "version": {
-      "appVersion": "App version",
-      "gitBranch": "Git Branch",
-      "gitShortHash": "Git Short Hash",
-      "gitFullHash": "Git Hash",
-      "gitCommitTime": "Git Commit Time",
-      "gitBuildTime": "Build Time"
     }
-  },
-  "navigation": {
-    "no-permission": "Your user does not have the required permissions to display the requested page.",
-    "workspace": "My workspaces",
-    "report-error": "Report error",
-    "submit": "Submit"
-  },
-  "message": {
-    "success": {
-      "save": "Saved successfully",
-      "delete": "Deleted successfully",
-      "discard": "All changes discarded successfully"
-    }
-  },
-  "confirmation": {
-    "discardChanges": {
-      "title": "Discard changes",
-      "message": "There are unsaved changes. Should they be discarded?"
-    }
-  },
-  "excelImport": {
-    "messageType": {
-      "info": "Info",
-      "warning": "Warning",
-      "error": "Error"
-    },
-    "modal": {
-      "messageTable": {
-        "columns": {
-          "type": "Typ_E",
-          "message": "Meldungen_E"
-        },
-        "overlayNoRows": "Keine Meldungen vorhanden_E"
-      }
-    },
-    "menu": {
-      "importFieldText": "Durchsuchen...E",
-      "importAddText": "",
-      "importNoFileTooltip": "Keine ausgewählt_E",
-      "uploadBtn": "Upload_E"
-    }
-  },
-  "progressModal": {
-    "title": "Bitte warten.._E"
-  },
-  "role": {
-    "termo_read_user": "Reader TerMo",
-    "termo_process_steering_responsible": "Responsible Process Steering"
   }
 }
