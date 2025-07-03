@@ -10,6 +10,10 @@
     <h2>{{ t('critical', {number: '5'}) }}</h2>
     <img src="favicon.ico" alt="App Favicon" width="32" height="32"/>
   </div>
+  <div style="margin-top: 15px; display: flex; gap: 10px">
+    <app-c-mat-button></app-c-mat-button>
+    <button matButton="filled" class="customMatBtn">Custom Button Class</button>
+  </div>
 </ng-container>
 
 <router-outlet/>

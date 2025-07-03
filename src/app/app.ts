@@ -7,13 +7,17 @@ import { DataApiService, MainApiService } from './api/api/services';
 import { AppState } from './shared/state/AppState/app.state';
 import { AsyncPipe } from '@angular/common';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { CMatButton } from './shared/ui/customMaterial/c-mat-button/c-mat-button';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
   imports: [
     AsyncPipe,
     RouterOutlet,
-    TranslocoModule
+    TranslocoModule,
+    CMatButton,
+    MatButton
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
