@@ -48,6 +48,12 @@ export class AppState {
 
   @Action(AppSetInitialUserRoleAction)
   setInitialUserRole(ctx: StateContext<IAppState>) {
+    ctx.patchState({
+      user: {
+        familyName: "Musterman",
+        roles: [1, 2, 3, 4]
+      }
+    })
     /*        this.openApiApiService.getCurrentUser().subscribe({
                     next: (userInfo: UserDataDoModel) => {
                         ctx.patchState({
