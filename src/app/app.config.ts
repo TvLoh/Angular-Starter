@@ -1,18 +1,15 @@
-import {
-  ApplicationConfig,
-  importProvidersFrom,
-  provideBrowserGlobalErrorListeners,
-  provideZoneChangeDetection
-} from '@angular/core';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { NgxsModule } from '@ngxs/store';
+import { provideStore } from '@ngxs/store';
 import { provideTransloco, translocoConfig, } from '@jsverse/transloco';
 import { TranslocoHttpLoader } from './shared/services/translocoHttpLoader';
 import { translocoConfiguration } from './shared/constants/translocoConfig';
 import { AppState } from './shared/state/AppState/app.state';
 import { provideHttpClient } from '@angular/common/http';
+import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
+import { withNgxsStoragePlugin } from '@ngxs/storage-plugin';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -24,10 +21,12 @@ export const appConfig: ApplicationConfig = {
       config: translocoConfig(translocoConfiguration),
       loader: TranslocoHttpLoader,
     }),
-    importProvidersFrom(
-      NgxsModule.forRoot([
-        AppState,
-      ]),
+    provideStore(
+      [AppState],
+      withNgxsReduxDevtoolsPlugin(),
+      withNgxsStoragePlugin({
+        keys: [AppState]
+      })
     )
   ]
 };
