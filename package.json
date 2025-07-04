@@ -10,7 +10,7 @@
     "test:watch": "jest --watch",
     "generate:openApi": "ng-openapi-gen -c src/app/api/openApiSrc/ng-openapi-gen-config.json",
     "docker:build": "ng build --configuration production && docker build --no-cache -t atsm-web-ui .",
-    "docker:run": "docker run -p 8080:80 atsm-web-ui",
+    "docker:run": "docker run -p 8080:80 --name ATSM-WE-UI atsm-web-ui",
     "docker:all": "npm run docker:build && npm run docker:run"
   },
   "prettier": {
