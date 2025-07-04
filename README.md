@@ -64,6 +64,8 @@ Translation: https://jsverse.gitbook.io/transloco/core-concepts/translation-in-t
 
 State(NGXS): https://www.ngxs.io/concepts/state
 
+Docker:  
+ng build --configuration production   
+docker build --no-cache -t angular-app .  
+docker run -d -p 8080:80 angular-app
 
-TODO:
-material + theeming
